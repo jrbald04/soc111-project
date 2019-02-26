@@ -1,0 +1,22 @@
+---
+title: "Soc 111 Project People"
+author: "Jake Baldauf"
+date: "2/26/2019"
+output: html_document
+---
+
+
+```{r}
+library(dplyr)
+list1 <- plyr::arrange(Class_roll_2019_, Year, desc(Year))
+list_good1 <- list1[48:74,]
+list_good2 <- list1[76:148,]
+list_good <- rbind(list_good1, list_good2)
+
+sample_names <- sample(list_good$Name, 70, replace = F)
+sort(sample_names)
+```
+
+
+
+
